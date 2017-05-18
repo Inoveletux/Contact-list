@@ -1,0 +1,21 @@
+#menu{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: darkslategrey;
+    z-index: 99999999999999;
+    padding: 0 10px;
+}
+
+.link{
+    padding: 5px;
+    width: calc(100% / 5);
+    display: inline-block;
+    color: white;
+    text-align: center;
+}
+.link a:visited, .link a:active, .link a:visited, .link a {
+    color: white;
+}
+.link:hover:not(:last-child) {box-shadow: inset 0 0 20px 1px black}

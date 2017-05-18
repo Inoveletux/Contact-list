@@ -1,0 +1,137 @@
+<!--the template addContact-->
+<template name="addContact">
+    {{> floatmenu}}
+
+    <div class="container" style="margin-top: 50px">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Scannez votre contact
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Scan QRCode</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!--to activate the QR scanner in the contact form-->
+                        {{#if showQRScanner}}
+                            {{> qrScanner }}
+                        {{/if}}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form class="well form-horizontal" id="contact_form">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Nouveau contact</legend>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Prénom</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" placeholder="Prénom" id="firstname" class="form-control"
+                                   type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Nom</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" placeholder="Nom" class="form-control" type="text" id="name">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">N° de Téléphone</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone" ></i></span>
+                            <input name="phone" placeholder="(+33)600112233" class="form-control" type="text" id="phone">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Adresse</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="address" placeholder="Adresse" class="form-control" type="text" id="address">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Ville</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="city" placeholder="Ville" class="form-control" type="text" id="city">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Code postal</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="zip" placeholder="Code postal" class="form-control" type="text" id="zip">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text area -->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Commentaires</label>
+                    <textarea name="comments" id="summernote">
+
+                    </textarea>
+
+                </div>
+
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" id="save" class="btn btn-warning">Enregistrer <span
+                                class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</template>

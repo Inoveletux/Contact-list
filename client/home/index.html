@@ -1,0 +1,8 @@
+<!--template to render which page you want to open once connected-->
+<template name="index">
+{{#if currentUser}}
+    {{> contactList}}
+{{else}}
+    {{> loginForm}}
+{{/if}}
+</template>

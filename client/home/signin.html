@@ -1,0 +1,71 @@
+<head>
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+
+
+<!-- login -->
+<template name="loginForm">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="" id="loginModal">
+                    <div class="modal-header">
+                        <h3></h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="well">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#login" data-toggle="tab">Connexion</a></li>
+                                <li><a href="#create" data-toggle="tab">Créer un compte</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane active in" id="login">
+                                    <form class="form-horizontal" action='' method="POST">
+                                        <fieldset>
+                                            <div id="legend">
+                                                <legend class="">Connexion</legend>
+                                            </div>
+                                            <div class="control-group">
+                                                <!-- Username -->
+                                                <label class="control-label"  for="username">Nom d'utilisateur</label>
+                                                <div class="controls">
+                                                    <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                                                </div>
+                                            </div>
+
+                                            <div class="control-group">
+                                                <!-- Password-->
+                                                <label class="control-label" for="password">Mot de passe</label>
+                                                <div class="controls">
+                                                    <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="control-group">
+                                                <!-- Button -->
+                                                <div class="controls">
+                                                    <button class="btn btn-success">Connexion</button>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="create">
+                                    <!--to render the register template inside this template-->
+                                    {{> register }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+

@@ -1,0 +1,14 @@
+<!--template for the menu, inside it's own file so it's easier to call it when needed-->
+<template name="floatmenu">
+    <div id="menu">
+        <div class="link">
+            <a href="/addcontact">Ajouter un contact</a>
+        </div>
+        <div class="link">
+            <a href="/contactlist">Liste de contact</a>
+        </div>
+        <div class="link">
+            {{>logOut}}
+        </div>
+    </div>
+</template>
